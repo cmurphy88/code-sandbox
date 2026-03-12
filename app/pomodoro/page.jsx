@@ -23,9 +23,9 @@ const PomodoroPage = () => {
     gain.connect(ctx.destination)
     oscillator.frequency.value = 880
     gain.gain.setValueAtTime(1, ctx.currentTime)
-    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.5)
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 5)
     oscillator.start(ctx.currentTime)
-    oscillator.stop(ctx.currentTime + 1.5)
+    oscillator.stop(ctx.currentTime + 5)
   }
 
   const handleDurationChange = (e) => {
